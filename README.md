@@ -1,2 +1,2 @@
-# tracker-app-email-auth-frontend
+app-with-email-auth
  
