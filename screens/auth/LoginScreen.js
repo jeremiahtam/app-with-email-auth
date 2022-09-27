@@ -38,13 +38,13 @@ const LoginScreen = (props) => {
         dispatch(insertUserData(resData.data))
       }
     } catch (e) {
-      console.log(e)
+      console.log(e.response)
       if (e.code == 'ECONNABORTED') {
         showToast('default', 'Timeout. Try again.', '60%')
       }
       if (e?.response?.data) {
         const errorData = e.response.data
-        setErrors(errorData.errors);
+        setErrors(errorData.message);
         showToast('default', errorData.message, '60%')
       }
     }
