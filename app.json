@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tracker-app",
-    "slug": "tracker-app",
+    "name": "app-with-email-auth",
+    "slug": "app-with-email-auth",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

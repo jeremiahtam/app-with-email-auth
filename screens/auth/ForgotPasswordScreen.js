@@ -10,7 +10,7 @@ const ForgotPasswordScreen = (props) => {
 
   const forgotPasswordHandler = async (values, setSubmitting, setErrors) => {
     try {
-      const res = await axios.post('http://192.168.43.101:8000/api/password/forgot-password',
+      const res = await axios.post('http://192.168.43.198:8000/api/password/forgot-password',
         values,
         {
           headers: {
@@ -20,6 +20,8 @@ const ForgotPasswordScreen = (props) => {
         }
       )
       const resData = res.data
+      console.log(resData)
+
       if (resData.success == false) {
         showToast('default', resData.message, '65%')
       } else {
@@ -30,13 +32,13 @@ const ForgotPasswordScreen = (props) => {
         })
       }
     } catch (e) {
-      console.log(e)
+      console.log(e.response)
       if (e.code == 'ECONNABORTED') {
         showToast('default', 'Timeout. Try again.', '60%')
       }
       if (e?.response?.data) {
         const errorData = e.response.data
-        setErrors(errorData.errors);
+        setErrors(errorData.message);
         showToast('default', errorData.message, '60%')
       }
     }
@@ -47,7 +49,7 @@ const ForgotPasswordScreen = (props) => {
     <KeyboardAvoidingWrapper>
       <Center bgColor='white' flex={1} justifyContent='center' alignContent='center' py='4' px='2%'>
         <Formik
-          initialValues={{
+        initialValues={{
             email: '',
           }}
           validationSchema={Yup.object({

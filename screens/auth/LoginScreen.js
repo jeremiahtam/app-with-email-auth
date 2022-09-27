@@ -20,7 +20,7 @@ const LoginScreen = (props) => {
   const loginHandler = async (values, setSubmitting, setErrors) => {
 
     try {
-      const res = await axios.post('http://192.168.43.101:8000/api/login',
+      const res = await axios.post('http://192.168.43.198:8000/api/login',
         values,
         {
           headers: {

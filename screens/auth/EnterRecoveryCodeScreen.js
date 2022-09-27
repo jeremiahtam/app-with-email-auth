@@ -17,7 +17,7 @@ const EnterRecoveryCodeScreen = (props) => {
       ...{ email: forgotPasswordDetails.email }
     }
     try {
-      const res = await axios.post('http://192.168.43.101:8000/api/password/confirm-password-reset-token',
+      const res = await axios.post('http://192.168.43.198:8000/api/password/confirm-password-reset-token',
         values,
         {
           headers: {

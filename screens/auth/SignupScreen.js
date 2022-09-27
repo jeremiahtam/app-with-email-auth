@@ -24,7 +24,7 @@ const SignupScreen = (props) => {
       password_confirmation: values.password_confirmation,
     }
     try {
-      const res = await axios.post('http://192.168.43.101:8000/api/register',
+      const res = await axios.post('http://192.168.43.198:8000/api/register',
         data,
         {
           headers: {

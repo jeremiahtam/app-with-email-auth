@@ -17,7 +17,7 @@ const WelcomeScreen = (props) => {
         />
       </Box>
       <Box flex={3}>
-        <Heading textAlign='center'>Feel safe everywhere you go</Heading>
+        <Heading textAlign='center'>Welcome, login or create an account</Heading>
         <Text color='blueGray.400' textAlign='center'>Creating an account only takes 2 minutes</Text>
         <Button my="2" p='3'
           bgColor='white'

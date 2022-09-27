@@ -27,7 +27,7 @@ const ResetPasswordScreen = (props) => {
     }
 
     try {
-      const res = await axios.post('http://192.168.43.101:8000/api/password/reset-password',
+      const res = await axios.post('http://192.168.43.198:8000/api/password/reset-password',
         values,
         {
           headers: {
